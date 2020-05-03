@@ -2,8 +2,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>MEUS JOGOS</title>
+      <title>Cadastro</title>
     <style>
+	
+	#pt{
+	color: white;
+	font-size: 30px;
+	text-align:center
+	}
+
+	#form1
+	{
+	  float: left;
+	  position: absolute;
+	  left: 700px;
+	  top: 250px;
+	}
+
+	label{
+		display: inline-block;
+		width: 120px;
+	    }
+
+	#form2
+	{
+	  float: left;
+	  position: absolute;
+	  left: 1200px;
+	  top: 250px;
+	  
+	}
+
+
 	table
 	{
 
@@ -69,7 +99,7 @@
 	border-color: white;
 	border:solid 1px;
 	position: relative;
-	top: 200px;
+	top: 100px;
 	left: 130px;
 
 	}
@@ -94,10 +124,10 @@
    </style>
     </head>
     <body>
-	<div id= "div1" >Meus Jogos</div>
+	<div id= "div1" >Cadastro</div>
 	<br>
 	<div id = "div2">
-
+	<p id ="pt" >Links para os jogos</p>
 	<div id ="div21" ><a href="diablo.html" target="_blank">Diablo 3 </a></li></div>
 	<div id ="div21" ><a href="divinity 2.html" target="_blank">Divinity: Original Sin 2 </a></div>
 	<div id ="div21" ><a href="the division 2.html" target="_blank">Tom Clancy's: The Division 2</a></div>
@@ -105,8 +135,8 @@
 	</div>
 
 	<div id = "div3"> 
-
-	 <form method="post" actionin="cadastro.html">
+	<div id = "form1">
+	<form  method="post" actionin="cadastro.html">
 	<label for = "nome"><b>Nome:</b> </label>
         <input type= "text" name="nome" id="nome">
 	<br>
@@ -132,21 +162,45 @@
         <input type= "text" name="Telefone" id="Telefone" placeholder="(XX) XXXXX-XXXX">
 	<br>
 	<br>
+	
+	
+	</form> 
+	</div>
+
+	<div id = "form2">
+	<form method="post" actionin="cadastro.html">
 	<label for = "endereço"><b>Endereço: </b></label>
         <input type= "text" name="Endereço" id="Endereço">
 	<br>
 	<br>
-	<label for = "numero"><b>Sobre: </b></label>
-        <input type= "text" name="Sobrenome" id="Sobrenome">
-
+	<label for = "numero"><b>Numero: </b></label>
+        <input type= "text" name="Numero" id="Numero">
+	<br>
+	<br>
+	<label for = "Login"><b>Login: </b></label>
+        <input type= "text" name="Login" id="Login">
+	<br>
+	<br>
+	<label for = "senha"><b>senha: </b></label>
+        <input type= "password" name="Senha" id="senha">
+	<br>
+	<br>
+	<label for = "estadp"><b>Estado:</b> </label>
+        <select id="estado" name="estado">
+	  <option value="SP">São Paulo</option>
+	  <option value="MG">Minas Gerais</option>
+	</select>
+	<br>
+	<br>
+	
 	</form> 
-
+	</div>
 	</div>
 
 <div id = "branco"></div>
 <div id = "div4">
  
-<p><a>Cadastre-se</a> <a>Fale Conosco</a> <a>Facebook </a> </p>
+<p><a>>>Cadastre-se</a> <a>>>Fale Conosco</a> <a>>>Facebook </a> </p>
  
 
 
