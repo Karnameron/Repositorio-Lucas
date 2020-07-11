@@ -39,8 +39,39 @@
     a:hover, a:visited, a:focus, a:active{ text-decoration: none; color: inherit; }
     </style>
 
+    <script>
+function setaraba()
+{
+  var i,elemento;
+  var loc = window.location.href;
+  var resultado = loc.substring((loc.length - 14));
+  
+  
+  for(i=1;i<4;i++)
+  {
+    elemento = document.getElementById(i).href;
+    elemento = elemento.substring((elemento.length) - 14)
+
+    if(elemento == resultado)
+    {
+     var x = document.getElementById("11");
+     x.className += "nav-item active";
+     
+    }
+    else
+    {
+      document.getElementById("22").className -= "nav-item active";
+      document.getElementById("33").className -= "nav-item active";
+    }
+    
+  }
+
+}
+
+    </script>
+
 </head>
-<body>
+<body onload="setaraba()">
 	
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">MJ</a>
@@ -50,24 +81,24 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="novoindex.html">Home <span class="sr-only">(current)</span></a>
+        <li id="11" class="nav-item">
+          <a  id="1" class="nav-link" href="novoindex.html">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="preços.html">Preço</a>
+        <li  id="22" class="nav-item">
+          <a id="2" class="nav-link" href="precos.html">Preço</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Jogos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="novodiablo.html">Diablo 3</a>
-            <a class="dropdown-item" href="novodivinity2.html">Divinity 2: Original Sin</a>
-            <a class="dropdown-item" href="novothedivision2.html">Tom's Clancy: The Division 2</a>
+            <a  class="dropdown-item" href="novodiablo.html">Diablo 3</a>
+            <a  class="dropdown-item" href="novodivinity2.html">Divinity 2: Original Sin</a>
+            <a  class="dropdown-item" href="novothedivision2.html">Tom's Clancy: The Division 2</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="novocadastro.html">Cadastre-se</a>
+        <li id="33" class="nav-item">
+          <a id="3" class="nav-link" href="novocadastro.html">Cadastre-se</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
