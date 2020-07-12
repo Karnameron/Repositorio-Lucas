@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 <style>
+
+  
     .icone{
         max-width: 200px;
         margin: auto;
@@ -38,7 +40,36 @@
     }
     a:hover, a:visited, a:focus, a:active{ text-decoration: none; color: inherit; }
     </style>
+<script>
+   function Zoom() { 
+            var img = document.getElementById("id1");
+            img.style.opacity = "0.5";  
+        } 
 
+        function Sair() { 
+            var img = document.getElementById("id1");
+            img.style.opacity = "1.0"; 
+        } 
+        function Zoom2() { 
+            var img = document.getElementById("id2");
+            img.style.opacity = "0.5";  
+        } 
+
+        function Sair2() { 
+            var img = document.getElementById("id2");
+            img.style.opacity = "1.0"; 
+        } 
+        function Zoom3() { 
+            var img = document.getElementById("id3");
+            img.style.opacity = "0.5";  
+        } 
+
+        function Sair3() { 
+            var img = document.getElementById("id3");
+            img.style.opacity = "1.0"; 
+        } 
+
+</script>
 </head>
 <body>
 	
@@ -55,7 +86,7 @@
           <a class="nav-link" href="novoindex.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="preços.html">Preço</a>
+          <a class="nav-link" href="precos.html">Preço</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -89,26 +120,26 @@
      
       </div>
       <div class="col-sm">
-        <img src="img/d32.jpg" class="d-block w-50" alt="0">
+        <img  src="img/d32.jpg" class="d-block w-50" alt="0">
      <br>
-     <img src="img/d33.jfif" class="d-block w-50" alt="0">
+     <img  src="img/d33.jfif" class="d-block w-50" alt="0">
      <br>
-     <img src="img/d31.jpg" class="d-block w-50" alt="0">
+     <img  src="img/d31.jpg" class="d-block w-50" alt="0">
       </div>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
-      <div class="row-sm">
-        <a href="https://www.blizzard.com/pt-br/games/d3/?locale=pt-br&" target="_blank"><img src="img/blizzard.png" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+      <div  class="row-sm">
+        <a onmouseover="Zoom()"  onmouseout="Sair()"  id="id1" class="opaci" href="https://www.blizzard.com/pt-br/games/d3/?locale=pt-br&" target="_blank"><img src="img/blizzard.png" width="250" height="100"></a>
         
       </div>
       <div class="row-sm">
-        <a href="https://www.submarino.com.br/produto/46638976/diablo-iii-3-eternal-collection-ps4?pfm_carac=diablo%203&pfm_page=search&pfm_pos=grid&pfm_type=search_page" target="_blank"><img src="img/submarino.png" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+        <a onmouseover="Zoom2()"  onmouseout="Sair2()"  id="id2"  href="https://www.submarino.com.br/produto/46638976/diablo-iii-3-eternal-collection-ps4?pfm_carac=diablo%203&pfm_page=search&pfm_pos=grid&pfm_type=search_page" target="_blank"><img src="img/submarino.png"  alt="0" width="250" height="100"></a>
       </div>
       <div class="row-sm">
-        <a href="https://www.americanas.com.br/busca/diablo-3" target="_blank"><img src="img/americanas.png" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+        <a onmouseover="Zoom3()"  onmouseout="Sair3()" id="id3" href="https://www.americanas.com.br/busca/diablo-3" target="_blank"><img src="img/americanas.png"  alt="0" width="250" height="100"></a>
       </div>
     </div>
   </div>
