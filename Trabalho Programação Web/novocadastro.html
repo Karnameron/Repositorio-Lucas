@@ -37,10 +37,73 @@
         margin: 4% auto;
     }
     a:hover, a:visited, a:focus, a:active{ text-decoration: none; color: inherit; }
-    </style>
+</style>
+<script>
+function formatarcampo()
+{
+  var tel = document.getElementById("example3").value;
+  alert(tel);
+  const parte1 = "("+tel.substring(0,2 )+")" ;
+  const parte2 = tel.substring(2,7);
+  const parte3 = "-"+tel.substring(7,11);
+  var total = parte1+parte2+parte3; 
+  alert(total);
+  document.getElementById("example3").value = total;
+
+}
+function validaremail(){
+var usuario = document.getElementById("email").value.substring(0, document.getElementById("email").value.indexOf("@"));
+var dominio = document.getElementById("email").value.substring(document.getElementById("email").value.indexOf("@")+ 1, document.getElementById("email").value.length);
+if ((usuario.length >=1) &&
+    (dominio.length >=3) && 
+    (usuario.search("@")==-1) && 
+    (dominio.search("@")==-1) &&
+    (usuario.search(" ")==-1) && 
+    (dominio.search(" ")==-1) &&
+    (dominio.search(".")!=-1) &&      
+    (dominio.indexOf(".") >=1)&& 
+    (dominio.lastIndexOf(".") < dominio.length - 1)) {
+alert("email valido");
+}
+else{
+alert("E-mail invalido");
+}
+
+
+
+
+}
+function setaraba()
+{
+  var i,elemento;
+  var loc = window.location.href;
+  var resultado = loc.substring((loc.length - 17));
+ 
+  
+  for(i=1;i<6;i++)
+  {
+    elemento = document.getElementById(i).href;
+    elemento = elemento.substring((elemento.length) - 17)
+
+    if(elemento == resultado)
+    {
+     var x = document.getElementById("33");
+     x.className += "nav-item active";
+     
+    }
+    else
+    {
+      document.getElementById("11").className -= "nav-item active";
+      document.getElementById("22").className -= "nav-item active";
+    }
+  }
+
+}
+
+</script>
 
 </head>
-<body>
+<body onload="setaraba()">
 	
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">MJ</a>
@@ -50,11 +113,11 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="novoindex.html">Home <span class="sr-only">(current)</span></a>
+        <li id="11" class="nav-item active">
+          <a id="1" class="nav-link" href="novoindex.html">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="preços.html">Preço</a>
+        <li id = "22" class="nav-item">
+          <a id = "2" class="nav-link" href="precos.html">Preço</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,8 +129,8 @@
             <a class="dropdown-item" href="novothedivision2.html">Tom's Clancy: The Division 2</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="novocadastro.html">Cadastre-se</a>
+        <li id ="33" class="nav-item">
+          <a id="3" class="nav-link" href="novocadastro.html">Cadastre-se</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -99,12 +162,16 @@
             <input type="text" class="form-control" id="example2" placeholder="dd/mm/aaaa">
           </div>
           <div class="form-group">
+            <label for="example3">Email:</label>
+            <input onblur="validaremail()" type="text" name="email" id="email"  maxlength="60" size='65'>
+          </div>
+          <div class="form-group">
               <label for="example3">Telefone:</label>
-              <input type="number" class="form-control" id="example3" placeholder="(XX)XXXXX-XXXXX">
+              <input onblur="formatarcampo()"  type="text" class="form-control" id="example3" maxlength="15"  placeholder="(XX)XXXXX-XXXXX">
           </div>
           <div class="form-group">
               <label for="example4">Endereço:</label>
-              <input type="text" class="form-control" id="example4" placeholder="(XX)XXXXX-XXXXX">
+              <input type="text" class="form-control" id="example4">
           </div>
           <div class="form-group">
               <label for="example5">Número:</label>
