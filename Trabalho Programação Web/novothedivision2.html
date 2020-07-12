@@ -39,6 +39,36 @@
 
     a:hover, a:visited, a:focus, a:active{ text-decoration: none; color: inherit; }
     </style>
+    <script>
+      function Zoom() { 
+               var img = document.getElementById("id1");
+               img.style.opacity = "0.5";  
+           } 
+    
+           function Sair() { 
+               var img = document.getElementById("id1");
+               img.style.opacity = "1.0"; 
+           } 
+           function Zoom2() { 
+               var img = document.getElementById("id2");
+               img.style.opacity = "0.5";  
+           } 
+    
+           function Sair2() { 
+               var img = document.getElementById("id2");
+               img.style.opacity = "1.0"; 
+           } 
+           function Zoom3() { 
+               var img = document.getElementById("id3");
+               img.style.opacity = "0.5";  
+           } 
+    
+           function Sair3() { 
+               var img = document.getElementById("id3");
+               img.style.opacity = "1.0"; 
+           } 
+    
+    </script>
 
 </head>
 <body>
@@ -55,7 +85,7 @@
           <a class="nav-link" href="novoindex.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="preços.html">Preço</a>
+          <a class="nav-link" href="precos.html">Preço</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -101,14 +131,14 @@
   <div class="container">
     <div class="row">
       <div class="row-sm">
-        <a href="https://www.ubisoft.com/pt-br/game/the-division/the-division-2" target="_blank"><img src="img/ubisoft.jpg" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+        <a id="id1" onmouseover="Zoom()"  onmouseout="Sair()  "href="https://www.ubisoft.com/pt-br/game/the-division/the-division-2" target="_blank"><img src="img/ubisoft.jpg" alt="0" width="250" height="100"></a>
         
       </div>
       <div class="row-sm">
-        <a href="https://www.americanas.com.br/produto/134192028/game-tom-clancy-s-the-division-2-xbox-one?WT.srch=1&acc=e789ea56094489dffd798f86ff51c7a9&epar=bp_pl_00_go_gm_jogos_todas_geral_gmv&gclid=Cj0KCQjwmdzzBRC7ARIsANdqRRmCw-E_Os9qcfZ-Cna5KgJAPv4NoloW5_I5Zz6WWmHsk6eRSbyG0MoaAsmbEALw_wcB&i=5612cbe46ed24cafb5cae011&o=5c5430ab6c28a3cb5060584b&opn=YSMESP&sellerid=02&wt.srch=1" target="_blank"><img src="img/americanas.png" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+        <a id="id2" onmouseover="Zoom2()"  onmouseout="Sair2() "href="https://www.americanas.com.br/produto/134192028/game-tom-clancy-s-the-division-2-xbox-one?WT.srch=1&acc=e789ea56094489dffd798f86ff51c7a9&epar=bp_pl_00_go_gm_jogos_todas_geral_gmv&gclid=Cj0KCQjwmdzzBRC7ARIsANdqRRmCw-E_Os9qcfZ-Cna5KgJAPv4NoloW5_I5Zz6WWmHsk6eRSbyG0MoaAsmbEALw_wcB&i=5612cbe46ed24cafb5cae011&o=5c5430ab6c28a3cb5060584b&opn=YSMESP&sellerid=02&wt.srch=1" target="_blank"><img src="img/americanas.png"  alt="0" width="250" height="100"></a>
       </div>
       <div class="row-sm">
-        <a href="https://www.kabum.com.br/produto/100155/game-tom-clancy-s-the-division-2-xbox-one?gclid=Cj0KCQjwmdzzBRC7ARIsANdqRRl2UdcadrtlzG36I_zKdvHQfX5A5liQcQIqqeqXAn8ju7B6ttinYhsaAgdBEALw_wcB" target="_blank"><img src="img/Kabum.png" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+        <a id="id3" onmouseover="Zoom3()"   onmouseout="Sair3() "href="https://www.kabum.com.br/produto/100155/game-tom-clancy-s-the-division-2-xbox-one?gclid=Cj0KCQjwmdzzBRC7ARIsANdqRRl2UdcadrtlzG36I_zKdvHQfX5A5liQcQIqqeqXAn8ju7B6ttinYhsaAgdBEALw_wcB" target="_blank"><img src="img/Kabum.png"  alt="0" width="250" height="100"></a>
       </div>
     </div>
   </div>
