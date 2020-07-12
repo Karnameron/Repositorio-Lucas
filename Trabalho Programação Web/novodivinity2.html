@@ -38,7 +38,36 @@
     }
     a:hover, a:visited, a:focus, a:active{ text-decoration: none; color: inherit; }
     </style>
+<script>
+  function Zoom() { 
+           var img = document.getElementById("id1");
+           img.style.opacity = "0.5";  
+       } 
 
+       function Sair() { 
+           var img = document.getElementById("id1");
+           img.style.opacity = "1.0"; 
+       } 
+       function Zoom2() { 
+           var img = document.getElementById("id2");
+           img.style.opacity = "0.5";  
+       } 
+
+       function Sair2() { 
+           var img = document.getElementById("id2");
+           img.style.opacity = "1.0"; 
+       } 
+       function Zoom3() { 
+           var img = document.getElementById("id3");
+           img.style.opacity = "0.5";  
+       } 
+
+       function Sair3() { 
+           var img = document.getElementById("id3");
+           img.style.opacity = "1.0"; 
+       } 
+
+</script>
 </head>
 <body>
 	
@@ -54,7 +83,7 @@
           <a class="nav-link" href="novoindex.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="preços.html">Preço</a>
+          <a class="nav-link" href="precos.html">Preço</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -101,14 +130,14 @@
   <div class="container">
     <div class="row">
       <div class="row-sm">
-        <a href="https://www.microsoft.com/pt-br/p/divinity-original-sin-2-definitive-edition/bw8pvl4cj2q6" target="_blank"><img src="img/microsoft.jpeg" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+        <a onmouseover="Zoom()"  onmouseout="Sair()"  id="id1" href="https://www.microsoft.com/pt-br/p/divinity-original-sin-2-definitive-edition/bw8pvl4cj2q6" target="_blank"><img src="img/microsoft.jpeg" alt="0" width="250" height="100"></a>
         
       </div>
       <div class="row-sm">
-        <a href="https://www.submarino.com.br/produto/42623414?WT.srch=1&acc=d47a04c6f99456bc289220d5d0ff208d&epar=bp_pl_00_go_g35167&gclid=Cj0KCQjwmdzzBRC7ARIsANdqRRmU0hrjBDxxCSoD2UwCm6sj8gLFctI5vugxGoUBOGMtq6vaT6deQJ0aAmfyEALw_wcB&i=5c19370feec3dfb1f868047d&o=5bdba963ebb19ac62cd9669f&opn=XMLGOOGLE&sellerid=23897748000134&wt.srch=1" target="_blank"><img src="img/submarino.png" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+        <a onmouseover="Zoom2()"  onmouseout="Sair2()"  id="id2" href="https://www.submarino.com.br/produto/42623414?WT.srch=1&acc=d47a04c6f99456bc289220d5d0ff208d&epar=bp_pl_00_go_g35167&gclid=Cj0KCQjwmdzzBRC7ARIsANdqRRmU0hrjBDxxCSoD2UwCm6sj8gLFctI5vugxGoUBOGMtq6vaT6deQJ0aAmfyEALw_wcB&i=5c19370feec3dfb1f868047d&o=5bdba963ebb19ac62cd9669f&opn=XMLGOOGLE&sellerid=23897748000134&wt.srch=1" target="_blank"><img src="img/submarino.png"  alt="0" width="250" height="100"></a>
       </div>
       <div class="row-sm">
-        <a href="https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/" target="_blank"><img src="img/steam.png" class="miniatura_link d-block mx-auto gb-3" alt="0" width="250" height="100"></a>
+        <a onmouseover="Zoom3()"  onmouseout="Sair3()"  id="id3" href="https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/" target="_blank"><img src="img/steam.png"  alt="0" width="250" height="100"></a>
       </div>
     </div>
   </div>
