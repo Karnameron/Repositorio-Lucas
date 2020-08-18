@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+    
+    
+    .divCenter { 
+                    
+                    width: 700px; 
+                    height: 700px; 
+                    left: 40%; 
+                    margin: -130px 0 0 -210px; 
+                    padding:10px;
+                    position: absolute; 
+                    top:30%; 
+                    
+                    }
+    
+    .divTitulo { 
+                    
+                    width: 600px; 
+                    height: 00px; 
+                    left: 40%; 
+                    margin: -130px 0 0 -210px; 
+                    padding:10px;
+                    position: absolute; 
+                    top: 30%; 
+                }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #fafafa;
+    }
+    
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #999;
+    }
+    
+    a, a:hover, a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+    
+    #sidebar {
+        
+        background: #000000;
+        color: #fff;
+        transition: all 0.3s;
+    }
+    
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #000000;
+    }
+    
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #000000;
+    }
+    
+    #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+    }
+    
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+    #sidebar ul li a:hover {
+        color: #ffffff;
+        background: rgb(41, 41, 41);
+    }
+    
+    #sidebar ul li.active > a, a[aria-expanded="true"] {
+        color: #fff;
+        background: #000000;
+    }
+    ul ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #474747;
+    }
+        .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        min-height: 100vh;
+    }
+    
+    #sidebar.active {
+        margin-left: -250px;
+    }
+    
+    a[data-toggle="collapse"] {
+        position: relative;
+    }
+    
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+    
+    @media (max-width: 768px) {
+        #sidebar {
+            margin-left: -250px;
+        }
+        #sidebar.active {
+            margin-left: 0;
+        }
+    }
+    
+    </style>
+
+<script>
+
+    function validaremail(){
+var usuario = document.getElementById("email").value.substring(0, document.getElementById("email").value.indexOf("@"));
+var dominio = document.getElementById("email").value.substring(document.getElementById("email").value.indexOf("@")+ 1, document.getElementById("email").value.length);
+if ((usuario.length >=1) &&
+    (dominio.length >=3) && 
+    (usuario.search("@")==-1) && 
+    (dominio.search("@")==-1) &&
+    (usuario.search(" ")==-1) && 
+    (dominio.search(" ")==-1) &&
+    (dominio.search(".")!=-1) &&      
+    (dominio.indexOf(".") >=1)&& 
+    (dominio.lastIndexOf(".") < dominio.length - 1)) {
+alert("email valido");
+}
+else{
+alert("E-mail invalido");
+}
+}
+</script>
+</head>
+<body>    
+    <script>
+        $(document).ready(function () {
+    
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+    
+    });
+    </script>
+    <div class="wrapper">
+        <nav id ="sidebar">
+            <div class="sidebar-header">
+                <img src="img/logo.png">
+            </div>
+            <ul class="list-unstyled components">
+                <p>Items</p>
+                <li class="active">
+                    <a href="Home.html">Home</a>
+                </li>
+                <li>
+                    <a href="Cadastro.html">Cadastro</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Serviços</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="Serviço 1.html">Corte Unitário</a>
+                        </li>
+                        <li>
+                            <a href="Serviço 2.html">Combo corte cabelo e barba</a>
+                        </li>
+                        <li>
+                            <a href="Serviço 3.html">Hidratação cabelo e barba</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="Contato.html">Contato</a>
+                </li>
+                <li>
+                    <a href="Galeria.html">Galeria</a>
+                </li>
+                <li>
+                    <a href="Comparativo.html">Comparativo</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm divCenter">
+                    <h1>Fale Conosco</h1>
+                    <form>
+                      <br>
+                        <div class="form-group">
+                            <label for="example3">Nome:</label>
+                            <input type="text" class="form-control" id="example3">
+                        </div>
+                        <div class="form-group">
+                            <label for="example4">Sobrenome:</label>
+                            <input type="text" class="form-control" id="example4">
+                        </div>
+                        <div class="form-group">
+                            <label for="example5">Email:</label>
+                            <input onblur ="validaremail()" type="email" class="form-control" id="example5">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Mensagem:</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary my-1">Submit</button>
+                      </form>
+
+                      <div>
+                        <br>
+                        <br>
+                        <p>Telefone para contato: (XX)XXXXX-XXXX</p>
+                        <p>E-mail para contatos: enderecoemail@gmail.com</p>
+                        <p>Redes Sociais:</p>
+                        <div class="container">
+                            <div class="row">
+                                <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-3x"></i></a>
+                                <a href="https://twitter.com/login?lang=pt"><i class="fa fa-twitter-square fa-3x" alt="0" width="50" height="50"></i></a>
+                                <a href="https://www.instagram.com/?hl=pt-br"><i class="fa fa-instagram fa-3x" alt="0" width="50" height="50"></i></a>
+                            </div>
+                          </div>
+                    </div>
+
+                  </div>
+                </div>
+            </div> 
+            
+        </div>
+
+    </div>
+
+    
+</body>
+
+
+
+</html>
